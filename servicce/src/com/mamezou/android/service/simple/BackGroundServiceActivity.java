@@ -7,12 +7,12 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class ServiceExample extends Activity {
+public class BackGroundServiceActivity extends Activity {
     private Button startButton;
 
     private OnClickListener startListener = new OnClickListener() {
         public void onClick(View view) {
-            Intent intent = new Intent(ServiceExample.this,
+            Intent intent = new Intent(BackGroundServiceActivity.this,
                     BackGroundService.class);
             
             startService(intent);
