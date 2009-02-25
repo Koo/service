@@ -13,7 +13,7 @@ public class BackGroundService extends Service {
 
     @Override
     public void onStart(Intent intent, int startId) {
-        showMessage(R.string.start_message);
+        Toast.makeText(this, R.string.start_message, Toast.LENGTH_SHORT).show();
         Thread t = new Thread() {
             @Override
             public void run() {
@@ -30,14 +30,6 @@ public class BackGroundService extends Service {
 
     @Override
     public void onDestroy() {
-        showMessage(R.string.stop_message);
-    }
-
-    private void showMessage(int messageId) {
-        showMessage(getText(messageId));
-    }
-
-    private void showMessage(CharSequence message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.stop_message, Toast.LENGTH_SHORT).show();
     }
 }
