@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Service call example</string>
+	<string name="bind_button_label">Bind Service</string>
+	<string name="unbind_button_label">Unbind Service</string>
+	<string name="call_button_label">Call Service</string>
+	<string name="binder_event_message">Binder Message</string>
+<!-- 
+    <string name="hello">Hello Service</string>
+	<string name="start_message">Example service started</string>
+	<string name="stop_message">Example service stoped</string>
+	<string name="time_expired_message">Time Expired!</string>
+	<string name="start_button_label">Start Service</string>
+	<string name="input_sec_label">Input wait sec</string>
+ -->
+</resources>
