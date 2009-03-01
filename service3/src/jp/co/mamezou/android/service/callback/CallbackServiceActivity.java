@@ -40,6 +40,7 @@ public class CallbackServiceActivity extends Activity {
             }
             unbindService(conn);
             setEnabled(bindButton, true);
+            setEnabled(unbindButton, false);
         }
     };
     private Handler handler = new Handler() {

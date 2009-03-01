@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Service call example</string>
+	<string name="bind_button_label">Bind Service</string>
+	<string name="unbind_button_label">Unbind Service</string>
+	<string name="call_button_label">Call Service</string>
+	<string name="binder_event_message">Binder Message</string>
+</resources>
