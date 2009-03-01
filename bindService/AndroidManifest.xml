@@ -14,6 +14,10 @@
 		</activity>
 		<service android:name=".BindService" 
 		android:process=":remote"
-		/>
+		>
+			<intent-filter>
+                <action android:name="com.mamezou.android.service.bind.IBindService" />
+			</intent-filter>
+		</service>
 	</application>
 </manifest> 

@@ -47,8 +47,7 @@ public class BindServiceActivity extends Activity {
     private OnClickListener bindListener = new OnClickListener() {
         public void onClick(View view) {
             setButtonEnabled(bindButton, false);
-            Intent intent = new Intent(BindServiceActivity.this,
-                    BindService.class);
+            Intent intent = new Intent(IBindService.class.getName());
             bindService(intent, conn, BIND_AUTO_CREATE);
         }
     };
