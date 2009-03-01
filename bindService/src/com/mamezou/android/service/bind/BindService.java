@@ -9,6 +9,14 @@ import android.os.IBinder;
 
 public class BindService extends Service {
 
+    private final IBindService.Stub stub = new IBindService.Stub() {
+        public String echo(String message) throws android.os.RemoteException {
+
+            showMessageToStatusBar("receive message [" + message + "]");
+            return message;
+        }
+    };
+
     public IBinder onBind(Intent intent) {
         return stub;
     }
@@ -17,14 +25,6 @@ public class BindService extends Service {
     public boolean onUnbind(Intent intent) {
         return super.onUnbind(intent);
     }
-
-    private final IBindService.Stub stub = new IBindService.Stub() {
-        public String echo(String message) throws android.os.RemoteException {
-
-            showMessageToStatusBar("receive message [" + message + "]");
-            return message;
-        }
-    };
 
     private void showMessageToStatusBar(String message) {
         NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
