@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.widget.Toast;
 
-public class BackGroundService extends Service {
+public class SimpleService extends Service {
 
     public IBinder onBind(Intent intent) {
         return null;
