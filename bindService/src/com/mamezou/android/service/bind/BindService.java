@@ -9,7 +9,7 @@ import android.os.IBinder;
 
 public class BindService extends Service {
 
-    private final IBindService.Stub stub = new IBindService.Stub() {
+    private final IBindService.Stub binder = new IBindService.Stub() {
         public String echo(String message) throws android.os.RemoteException {
 
             showMessageToStatusBar("receive message [" + message + "]");
@@ -18,12 +18,7 @@ public class BindService extends Service {
     };
 
     public IBinder onBind(Intent intent) {
-        return stub;
-    }
-
-    @Override
-    public boolean onUnbind(Intent intent) {
-        return super.onUnbind(intent);
+        return binder;
     }
 
     private void showMessageToStatusBar(String message) {
