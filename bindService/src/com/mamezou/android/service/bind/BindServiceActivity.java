@@ -29,7 +29,6 @@ public class BindServiceActivity extends Activity {
         }
 
         public void onServiceDisconnected(ComponentName componentName) {
-            conn = null;
             setButtonEnabled(bindButton, true);
             setButtonEnabled(unbindButton, false);
             setButtonEnabled(unbindButton, false);
@@ -41,7 +40,6 @@ public class BindServiceActivity extends Activity {
         setButtonEnabled(callButton, false);
         setButtonEnabled(unbindButton, false);
         unbindService(conn);
-        conn = null;
     }
 
     private OnClickListener bindListener = new OnClickListener() {
@@ -91,9 +89,7 @@ public class BindServiceActivity extends Activity {
 
     @Override
     protected void onPause() {
-        if (conn != null) {
-            unbind();
-        }
+        unbind();
         super.onPause();
     }
     
