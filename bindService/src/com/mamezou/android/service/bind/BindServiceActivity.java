@@ -30,7 +30,7 @@ public class BindServiceActivity extends Activity {
 
         public void onServiceDisconnected(ComponentName componentName) {
             setButtonEnabled(bindButton, true);
-            setButtonEnabled(unbindButton, false);
+            setButtonEnabled(callButton, false);
             setButtonEnabled(unbindButton, false);
         }
     };
